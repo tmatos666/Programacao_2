@@ -56,12 +56,12 @@ print(final)
 """
 
 #Ex 6
-"""def lerInteiro(n, caracter):
+"""def readInt(n, caracter):
     for i in range(0,n):
         print(caracter,end='')
 
 n = input('Input number: ')
-lerInteiro(int(n), '#')
+readInt(int(n), '#')
 """
 
 #Ex 7
@@ -71,7 +71,7 @@ lerInteiro(int(n), '#')
     else:
         return -1
 
-def lerNotas():
+def readNotes():
     sum = 0
     i = 0
     while  i < 10:
@@ -83,7 +83,7 @@ def lerNotas():
             print('Grade error!!')       
     return sum/10
 
-print('Average: ', lerNotas())
+print('Average: ', readNotes())
 """
 #Ex 8
 """def do(numero):
@@ -93,4 +93,14 @@ print('Average: ', lerNotas())
         print('*' * numero)
         do(numero-1)
 do(4)
+"""
+
+#Ex 9
+"""num = int(input("Please choose a number to divide: "))
+listRange = list(range(1,num+1))
+divisorList = []
+for number in listRange:
+    if num % number == 0:
+        divisorList.append(number)
+print(divisorList)
 """
