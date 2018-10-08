@@ -83,7 +83,8 @@ for i in string_a_comparar:
 """
 
 #Ex11
-"""string_a_comparar = ["Mission: successful", "Last Mission: unsuccessful", "Next Mission: successful upon capture of target"]
+"""
+string_a_comparar = ["Mission: successful", "Last Mission: unsuccessful", "Next Mission: successful upon capture of target"]
 pattern = re.compile("^Mission: successful$")
 for i in string_a_comparar:
     s = re.findall(pattern, i)
