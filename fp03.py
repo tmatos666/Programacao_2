@@ -47,6 +47,5 @@ for x in p.open():
     s = re.search(pattern, x) 
     sum += int(s[0])
     #print(s)
-
 print(sum)
 """
