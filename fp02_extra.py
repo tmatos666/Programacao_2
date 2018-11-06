@@ -3,8 +3,8 @@ import re
 """string_a_comparar = ["Jan 1987", "May 1969", "Aug 2011"]
 pattern = re.compile(r"(\w+\s(\d+))")
 for i in string_a_comparar:
-    s = re.findall(pattern, i)
-    print(i,": ", s)
+    s = re.search(pattern, i)
+    print(i,": ", s.group(1), s.group(2))
 """
 
 #Ex2
@@ -14,10 +14,12 @@ for i in string_a_comparar:
     s = re.search(pattern, i)
     print(i,": ", s.group(2)," -- ", s.group(3))
 """
+
 #Ex3
 """string_a_comparar = ["I love cats", "I love dogs","I love logs",
 "I love cots"]
-pattern = re.compile(r"I\slove\scats|I\slove\sdogs")
+#pattern = re.compile(r"I\slove\scats|I\slove\sdogs")
+pattern = re.compile(r"(I love (cats|dogs))")
 for i in string_a_comparar:
     s = re.findall(pattern, i)
     print(i,": \t", s)
