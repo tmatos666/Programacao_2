@@ -1,4 +1,4 @@
-#Ex1
+# Ex1
 """class Person:
     def __init__(self, nome, idade, altura, peso=60):
         self.nome = nome
@@ -15,7 +15,7 @@ p2 = Person("Teresa", 20, 158, 45)
 p2.printdados()
 """
 
-#Ex2
+# Ex2
 """class Carro:
     def __init__(self, marca, cilindrada, numeroPortas, potencia):
         self.marca = marca
@@ -32,7 +32,7 @@ p2 = Carro("BMW", 2000, 2, 150)
 p2.printdados()
 """
 
-#Ex3
+# Ex3
 """class Person:
     def __init__(self, nome, idade, altura, peso=60):
         self.nome = nome
@@ -53,7 +53,7 @@ p2.printdados()
 p2.falar()
 """
 
-#Ex4
+# Ex4
 """class Contador:
     def __init__(self, contador=0):
          self.contador=contador
@@ -81,5 +81,101 @@ while novoContador.contador < 3:
         novoContador.contador += 1
 
 print("Carregue mais papel!")
- """
-    
+"""
+
+"""
+# Ex 5
+class Dog:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def toString(self):
+        return "nome:{0}\nidade:{1}\n---------".format(self.nome, self.idade)
+
+class Pets:
+    def __init__(self, dogs=None):
+        self.dogs = dogs
+
+    def toString(self):
+        for i in self.dogs: 
+            print(i.toString())
+
+d1=Dog("Becky",10)
+d2=Dog("Scooby",1)
+d3=Dog("Laika",5)
+
+pets = Pets([d1, d2, d3])
+pets.toString()
+"""
+
+"""
+# Ex 6
+class Rectangle:
+    def __init__(self, comprimento, largura):
+        self.comprimento = comprimento
+        self.largura = largura
+
+    def area(self):
+        return self.comprimento*self.largura
+
+
+rec = Rectangle(10, 5)
+print(rec.area())
+"""
+
+"""
+import math
+# Ex 7
+class Circle:
+    def __init__(self, raio):
+        self.raio = raio
+
+    def perimetro(self):
+        return 2*math.pi*self.raio
+
+    def area(self):
+        return 2*math.pi*(self.raio*self.raio)
+
+
+circle = Circle(5)
+print(circle.perimetro())
+print(circle.area())
+"""
+
+"""
+#Ex8
+surname is a class attribute
+all the rest are instance attributes
+"""
+
+"""
+# Ex9
+class Numbers:
+    multiplier = 2
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def add(self):
+        return self.x + self.y
+
+    def multiply(self, a):
+        return Numbers.multiplier*a
+
+    @staticmethod
+    def subtract(b, c):
+        return b - c
+
+    def values(self):
+        return [self.x, self.y]
+
+a = Numbers(1,2)
+print(a.add())#expected 3
+print(a.multiply(10))#expected 20
+print(a.subtract(5,3))#expected 2
+
+for i in a.values():#expected [1,2]
+    print(i)
+"""
