@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new Album</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        .wrapper{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>Create Album</h2>
+                    </div>
+                    <p>Please fill this form and submit to add a new Album to the database.</p>
+                    <form action="create" method="POST">
+                        <div class="form-group">
+                            
+                            {% csrf_token %}
+                            
+                            <div class="form-group">
+                                    <label for="id_album">New Album</label>
+                                    <input style="width: 550px;" type="text" id="id_album" name="album" class="form-control" required>
+                            </div>
+                            
+                                <div class="form-group">
+                                    <label for="id_artist">Pick up Artist</label>
+                                    <select id="id_artist" name="artist" multiple style="height: 110px; width: 550px;">
+                                        {% for key, value in artists %}
+                                            <option value="{{ key }}">{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                            </div>
+                            <div class="form-group"></div>
+                                <label for="id_tracks">Insert tracks: <strong>One per line</strong></label>
+                                <textarea name="tracks" id="id_tracks" cols="75" rows="10" ></textarea>
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                            <a href="http://127.0.0.1:8000" class="btn btn-default">Cancel</a>
+                    </form>
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
