@@ -18,7 +18,6 @@ p = Path('.')
 f = open(name, 'w')
 for i in p.iterdir():
      f.write(str(i)+'\n')
-     print(i)
 f.close()
 """
 
