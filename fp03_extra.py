@@ -25,7 +25,7 @@ f.close()
 #Ex3
 """
 name = input('Qual o nome do ficheiro?')
-p = Path('C:/Users/RAMP/Desktop/MeoCloud/Aulas ESTGF/2019_2020/CTESP/Programação 2/Práticas/Programacao_2')
+p = Path('.')
 f = open(name, 'w')
 for i in p.glob('*.txt'):
     for x in i.open():
